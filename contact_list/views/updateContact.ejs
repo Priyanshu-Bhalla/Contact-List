@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/new_contact.css">
+    <title>
+        <%=
+        title
+         %>
+    </title>
+</head>
+<body>
+    <form action="/update-contact" method="post" class="container-fluid">
+      <h1 style="margin-top: -20px; margin-bottom: 20px;">Update Your Contact</h1>
+        <div class="form-group">
+          <label for="exampleName">Name:</label>
+          <input type="text" name="name" class="form-control" placeholder="Enter your name" id="exampleName" autocomplete="off" required >
+        </div>
+        <div class="form-group">
+            <label for="examplePhone">Phone Number:</label>
+            <input type="number" name="phone" class="form-control" placeholder="Enter your phone number" id="examplePhone" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address:</label>
+          <input type="email" name="email" class="form-control" placeholder="Enter your email" id="exampleInputEmail1" autocomplete="off" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button class="btn  btn-dark"  type="submit">Add Contact</button>
+      </form>
+   
+        <button type="button" class="btn btn-outline-dark"><a  href="/"><--View Your Contact List</a></button>
+</body>
+</html>
