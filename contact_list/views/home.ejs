@@ -15,7 +15,10 @@
 </head>
 <body>
     <h1>Contact List</h1>
-    
+    <form action="" class="search_form">
+        <input class="search_field" type="text" placeholder="Search" />
+        <button class="btn btn-search btn-outline-dark btn-md">Search</button>
+      </form>
 
     <div>
         <table class="table">
@@ -34,7 +37,7 @@
                         <td><%= i.phone%></td>
                         <td><%= i.email%></td>
                         <td><div class="delete-button">
-                            <button class="btn delete-btn btn-info btn-sm"  type="submit"><a href="/UpdatingContact">
+                            <button class="btn delete-btn btn-info btn-sm"  type="submit"><a href="/update-contact/?id=<%=i.id %>">
                                 <i class="fas fa-user-edit"></i></i>&nbsp Update
                             </a></button> 
                             

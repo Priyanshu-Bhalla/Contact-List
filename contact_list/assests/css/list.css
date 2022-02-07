@@ -28,3 +28,31 @@ a:active {
 	text-decoration: none;
 	color: white;
 }
+.search_form {
+	margin-left: 500px;
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.search_field {
+	width: 60%;
+	height: 40px;
+	font-family: inherit;
+	font-size: 18px;
+	outline: none;
+	border: none;
+	padding-left: 10px;
+	border-radius: 6px;
+	-webkit-box-shadow: 9px 6px 25px -17px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 9px 6px 25px -17px rgba(0, 0, 0, 0.75);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.btn-search {
+	margin-left: -70px;
+}
+.search_form {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

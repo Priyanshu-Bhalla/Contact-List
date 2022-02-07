@@ -20,14 +20,18 @@ app.get('/addContact', function(req, res){
     });
   
 });
-app.get('/UpdatingContact', function(req, res){
-    console.log(res.query.id);
-    return res.render('updateContact', {
-        title: "Update Contact"
-    });
-  
-});
-
+ app.get('/update-contact/',function(req,res){
+     Contact.findById(req.query.id,(err,data)=>{
+         if(err){
+             console.log(err);
+         }
+         else{
+             res.render('updateContact',{
+                 data:data,
+             })
+         }
+     })
+ })
 
 app.get('/', function(req, res){
         Contact.find({},function(err,contacts){
@@ -84,9 +88,13 @@ app.get('/delete-contact/', function(req, res){
     
 });
 app.post('/update-contact/', function(req, res){
-    console.log(req.query.id);
-    Contact.findByIdAndUpdate(req.query.id, req.body, function(err, user){
-        return res.redirect('/');
+    Contact.findByIdAndUpdate(
+        req.query.id,
+        { name: req.body.name, email: req.body.email, phone: req.body.phone },
+        (error) => {
+          if (error) console.log(error);
+          else res.redirect("/");
+        }
+      );
     });
     
-});
